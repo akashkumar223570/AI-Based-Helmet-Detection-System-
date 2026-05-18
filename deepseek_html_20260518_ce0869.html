@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<title>E-Governance Master Quiz | 50 MCQs with Corrections</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #eef2f9;
+  margin: 0;
+  padding: 24px 16px;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  padding: 28px 32px 40px;
+  transition: all 0.2s;
+}
+h1 {
+  color: #0a2b4e;
+  font-weight: 700;
+  font-size: 1.9rem;
+  margin-top: 0;
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
+}
+.sub {
+  color: #2c5282;
+  border-left: 4px solid #3b82f6;
+  padding-left: 14px;
+  margin: 8px 0 20px 0;
+  font-weight: 500;
+  background: #f0f6ff;
+  border-radius: 0 16px 16px 0;
+  line-height: 1.3;
+}
+.small {
+  font-size: 0.85rem;
+  color: #2d3748;
+  background: #f8fafc;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 40px;
+}
+#quiz {
+  margin-top: 20px;
+}
+.question-card {
+  background: #fefefe;
+  border: 1px solid #e2edff;
+  border-radius: 20px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+.question-card:hover {
+  border-color: #cbdffc;
+  background: #ffffff;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.03);
+}
+.question-text {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #0f2b42;
+  margin: 0 0 12px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.q-number {
+  background: #1e3a8a;
+  color: white;
+  border-radius: 40px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  display: inline-block;
+  width: auto;
+  white-space: nowrap;
+}
+.options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fafcff;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid #e4edfa;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.94rem;
+}
+.option:hover {
+  background: #eef4ff;
+  border-color: #93c5fd;
+  transform: translateX(4px);
+}
+.option input {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  accent-color: #2563eb;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+  align-items: center;
+  justify-content: space-between;
+}
+button {
+  background: #1f3a6b;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+button:hover {
+  background: #0f2c52;
+  transform: scale(0.98);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.reset-btn {
+  background: #4b5563;
+}
+.reset-btn:hover {
+  background: #2d3a4f;
+}
+#result {
+  margin-top: 36px;
+  background: #f0f9ff;
+  border-radius: 28px;
+  padding: 20px 28px;
+  border-left: 6px solid #2563eb;
+  transition: 0.2s;
+}
+.result-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 15px;
+}
+.score-badge {
+  background: #1e3a8a;
+  color: white;
+  border-radius: 60px;
+  padding: 6px 20px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.performance-tag {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.detailed-link {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  text-align: right;
+}
+hr {
+  margin: 20px 0;
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, #cbd5e1, transparent);
+}
+@media (max-width: 650px) {
+  .container {
+    padding: 20px 16px;
+  }
+  .option {
+    padding: 8px 12px;
+  }
+  .question-text {
+    font-size: 0.95rem;
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>📘 E-Governance & Digital Administration</h1>
+  <div class="sub">✅ 50 MCQs | Based on MGPRU (VCA/BCA 2nd Sem) | Revised Answer Key</div>
+  <p class="small">🔍 Each question has one correct answer. Submit to view performance & score.</p>
+  
+  <form id="quiz"></form>
+  
+  <div class="btn-group">
+    <button type="button" id="submitBtn">📋 Submit & Evaluate</button>
+    <button type="button" id="resetBtn" class="reset-btn">⟳ Reset All Answers</button>
+  </div>
+  
+  <div id="result">
+    <p style="color:#2c5282; font-weight:500;">✨ Your result will appear here after submission.</p>
+  </div>
+</div>
+
+<script>
+// --------------------------------------------------------------
+// CORRECTED QUIZ DATA: 50 verified e-governance questions
+// Based on standard syllabus (NeGP, G2C/G2B/G2G, security principles, Digital India)
+// --------------------------------------------------------------
+const questions = [
+  { q: "1. What is E-Governance?", options: ["Use of information and communication technology in government services", "Traditional paper-based administration", "Private sector management", "Manual record keeping only"], answer: 0 },
+  { q: "2. What is the primary purpose of e-Governance?", options: ["To improve government service delivery", "To increase paper work", "To reduce transparency", "To eliminate citizens"], answer: 0 },
+  { q: "3. Which of the following is a major objective of e-Governance?", options: ["Transparency and accountability", "Higher bureaucracy", "Increased corruption", "Slower communication"], answer: 0 },
+  { q: "4. Which technology is most essential for e-Governance?", options: ["Information and Communication Technology (ICT)", "Typewriter", "Fax machine", "Photocopy machine"], answer: 0 },
+  { q: "5. Which of the following is a benefit of e-Governance?", options: ["Faster and efficient services", "More delays", "Higher cost", "Less accessibility"], answer: 0 },
+  { q: "6. What does G2C stand for?", options: ["Government to Citizen", "Government to Company", "General to Customer", "Group to Citizen"], answer: 0 },
+  { q: "7. What does G2B stand for?", options: ["Government to Business", "Government to Bank", "Group to Business", "Government to Board"], answer: 0 },
+  { q: "8. What does G2G stand for?", options: ["Government to Government", "General to General", "Government to Group", "Group to Government"], answer: 0 },
+  { q: "9. What does G2E stand for?", options: ["Government to Employee", "Government to Education", "General to Employee", "Government to Enterprise"], answer: 0 },
+  { q: "10. Which of the following is an example of e-Governance?", options: ["Online income tax filing", "Manual ledger entry", "Paper application only", "Physical notice board"], answer: 0 },
+  { q: "11. What is the digital divide?", options: ["Gap between those with and without access to technology", "Difference between two software versions", "Division of digital files", "Computer memory partition"], answer: 0 },
+  { q: "12. Which factor is critical for successful e-Governance?", options: ["Strong political will", "Lack of infrastructure", "Resistance to change", "Poor connectivity"], answer: 0 },
+  { q: "13. Which of the following is a challenge in e-Governance?", options: ["Cyber security threats", "Improved transparency", "Quick decision making", "Cost reduction"], answer: 0 },
+  { q: "14. What is NeGP?", options: ["National e-Governance Plan", "New Electronic Governance Program", "National Economic Growth Plan", "Network e-Government Protocol"], answer: 0 },
+  { q: "15. Which country initiative transformed NeGP into Digital India?", options: ["India", "Japan", "Germany", "Brazil"], answer: 0 },
+  { q: "16. What is CSC in e-Governance?", options: ["Common Service Centre", "Central Security Cell", "Citizen Support Council", "Computer Service Channel"], answer: 0 },
+  { q: "17. Which of the following is a Mission Mode Project?", options: ["Passport Seva", "Private Banking", "Railway Workshop", "Manual Census"], answer: 0 },
+  { q: "18. What is SWAN in NeGP?", options: ["State Wide Area Network", "Software Wide Access Node", "Secure Web Access Network", "System Wireless Area Network"], answer: 0 },
+  { q: "19. What is SSDG?", options: ["State Service Delivery Gateway", "Secure State Data Grid", "Service Software Development Group", "System Security Data Gateway"], answer: 0 },
+  { q: "20. What is the purpose of State Data Centres?", options: ["To store and manage government data", "To manufacture computers", "To print forms", "To conduct elections"], answer: 0 },
+  { q: "21. What is the first phase of e-Governance project development?", options: ["Conceptualization", "Support", "Maintenance", "Closure"], answer: 0 },
+  { q: "22. Which phase defines system architecture?", options: ["Architect Phase", "Support Phase", "Testing Phase", "Closure Phase"], answer: 0 },
+  { q: "23. What is PPP in e-Governance?", options: ["Public Private Partnership", "Public Policy Program", "Private Public Process", "Project Planning Procedure"], answer: 0 },
+  { q: "24. Which model shares responsibilities between government and private sector?", options: ["PPP Model", "Manual Model", "Standalone Model", "Offline Model"], answer: 0 },
+  { q: "25. What is a key concern in e-Governance projects?", options: ["Security", "Paper shortage", "Office furniture", "Building color"], answer: 0 },
+  { q: "26. Which security principle ensures data is not altered?", options: ["Integrity", "Availability", "Confidentiality", "Authentication"], answer: 0 },
+  { q: "27. Which security principle ensures authorized access only?", options: ["Confidentiality", "Integrity", "Availability", "Redundancy"], answer: 0 },
+  { q: "28. Which security principle ensures services are accessible when needed?", options: ["Availability", "Integrity", "Confidentiality", "Compression"], answer: 0 },
+  { q: "29. What is capacity building?", options: ["Developing skills and competencies", "Increasing office size", "Buying more hardware only", "Reducing staff"], answer: 0 },
+  { q: "30. Change management helps organizations to:", options: ["Adapt to new systems and processes", "Avoid training", "Increase paperwork", "Ignore technology"], answer: 0 },
+  { q: "31. Leadership in e-Governance is important for:", options: ["Vision and successful implementation", "Reducing communication", "Delaying decisions", "Increasing resistance"], answer: 0 },
+  { q: "32. What is Government Process Re-engineering (GPR)?", options: ["Redesigning processes to improve efficiency", "Constructing new government buildings", "Hiring more clerks", "Changing office timings"], answer: 0 },
+  { q: "33. Which is a tool used in process re-engineering?", options: ["Workflow analysis", "Typewriter", "Carbon paper", "Ledger book"], answer: 0 },
+  { q: "34. Legal reforms are required to:", options: ["Support digital transactions", "Increase paperwork", "Eliminate internet", "Reduce service delivery"], answer: 0 },
+  { q: "35. Enterprise Architecture helps in:", options: ["Aligning business and technology", "Painting offices", "Recruiting staff", "Printing forms"], answer: 0 },
+  { q: "36. Which initiative provides digital identity in India?", options: ["Aadhaar", "PAN Card only", "Voter List", "Passport"], answer: 0 },
+  { q: "37. Which portal allows online passport application?", options: ["Passport Seva", "IRCTC", "GSTN", "UIDAI"], answer: 0 },
+  { q: "38. Which of the following is a G2C service?", options: ["Online birth certificate", "Interdepartmental memo", "Vendor tender", "Employee payroll"], answer: 0 },
+  { q: "39. Which of the following is a G2B service?", options: ["E-procurement", "Online pension", "School admission", "Land records"], answer: 0 },
+  { q: "40. Which of the following is a G2G service?", options: ["Interdepartmental data sharing", "Passport application", "Tax payment", "Bill payment"], answer: 0 },
+  { q: "41. Which of the following is a G2E service?", options: ["Employee leave management", "Business registration", "Citizen grievance", "Property tax payment"], answer: 0 },
+  { q: "42. Which ministry leads Digital India initiatives?", options: ["Ministry of Electronics and Information Technology", "Ministry of Agriculture", "Ministry of Tourism", "Ministry of Sports"], answer: 0 },
+  { q: "43. What is e-Procurement?", options: ["Online purchase and tender management", "Manual purchasing", "Cash-only buying", "Telephone procurement"], answer: 0 },
+  { q: "44. Which platform handles GST online?", options: ["GSTN", "UIDAI", "SWAN", "NIC"], answer: 0 },
+  { q: "45. Which organization provides many government IT services in India?", options: ["NIC", "RBI", "SEBI", "ISRO"], answer: 0 },
+  { q: "46. Social media in e-Governance is used for:", options: ["Citizen engagement and feedback", "Reducing communication", "Increasing secrecy", "Manual filing"], answer: 0 },
+  { q: "47. Which of the following improves transparency most?", options: ["Online service tracking", "Closed files", "Manual registers", "Delayed updates"], answer: 0 },
+  { q: "48. Which factor reduces the digital divide?", options: ["Internet access and digital literacy", "Higher paperwork", "Limited education", "Poor connectivity"], answer: 0 },
+  { q: "49. What is the role of training in e-Governance?", options: ["Build user skills and acceptance", "Increase resistance", "Reduce productivity", "Avoid technology use"], answer: 0 },
+  { q: "50. What is the ultimate goal of e-Governance?", options: ["Citizen-centric and efficient governance", "More bureaucracy", "Less transparency", "Manual administration only"], answer: 0 }
+];
+
+// Build the quiz form dynamically with improved UI and radio groups
+const quizContainer = document.getElementById('quiz');
+function buildQuiz() {
+  quizContainer.innerHTML = '';
+  questions.forEach((item, idx) => {
+    const card = document.createElement('div');
+    card.className = 'question-card';
+    const numberSpan = `<span class="q-number">Q${idx+1}</span>`;
+    card.innerHTML = `
+      <div class="question-text">
+        ${numberSpan} ${escapeHtml(item.q)}
+      </div>
+      <div class="options-grid" id="options-${idx}">
+        ${item.options.map((opt, optIdx) => `
+          <label class="option">
+            <input type="radio" name="q${idx}" value="${optIdx}">
+            <span>${escapeHtml(opt)}</span>
+          </label>
+        `).join('')}
+      </div>
+    `;
+    quizContainer.appendChild(card);
+  });
+}
+
+// simple XSS escape
+function escapeHtml(str) {
+  return str.replace(/[&<>]/g, function(m) {
+    if (m === '&') return '&amp;';
+    if (m === '<') return '&lt;';
+    if (m === '>') return '&gt;';
+    return m;
+  }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
+    return c;
+  });
+}
+
+// Compute score and display result with detailed tracking
+function evaluateQuiz() {
+  let score = 0;
+  const userAnswers = [];
+  for (let i = 0; i < questions.length; i++) {
+    const selectedRadio = document.querySelector(`input[name="q${i}"]:checked`);
+    let selectedVal = -1;
+    if (selectedRadio) {
+      selectedVal = parseInt(selectedRadio.value);
+    }
+    const isCorrect = (selectedVal === questions[i].answer);
+    if (isCorrect) score++;
+    userAnswers.push({
+      selected: selectedVal,
+      correct: isCorrect,
+      correctIndex: questions[i].answer
+    });
+  }
+  
+  const percentage = (score / questions.length * 100).toFixed(1);
+  let performance = '';
+  if (percentage >= 90) performance = '🏆 Excellent (Mastery)';
+  else if (percentage >= 75) performance = '🌟 Very Good';
+  else if (percentage >= 60) performance = '👍 Good';
+  else if (percentage >= 40) performance = '📚 Average - Review recommended';
+  else performance = '⚠️ Needs Improvement - Study more';
+  
+  // Build result block
+  let resultHtml = `
+    <div class="result-stats">
+      <div><span class="score-badge">🎯 ${score} / ${questions.length}</span></div>
+      <div class="performance-tag">📊 ${percentage}% &nbsp; ${performance}</div>
+    </div>
+    <hr>
+    <div style="font-size: 0.9rem; line-height: 1.5;">
+      <p><strong>✅ Answer key correctness:</strong> All 50 answers follow standard e-governance syllabus (NeGP, Digital India, G2C, Security principles).</p>
+      <details>
+        <summary style="cursor:pointer; font-weight:600; color:#1e40af;">🔍 Show missed questions (for review)</summary>
+        <div style="margin-top:12px; max-height:280px; overflow-y:auto; background:#fff; padding:12px; border-radius:20px;">
+  `;
+  
+  let missedCount = 0;
+  for (let i = 0; i < userAnswers.length; i++) {
+    if (!userAnswers[i].correct) {
+      missedCount++;
+      const correctOptionText = questions[i].options[questions[i].answer];
+      const userChoice = userAnswers[i].selected !== -1 ? questions[i].options[userAnswers[i].selected] : 'Not answered';
+      resultHtml += `
+        <div style="margin-bottom: 12px; border-bottom: 1px solid #e2e8f0; padding: 6px 0;">
+          <strong>Q${i+1}: ${escapeHtml(questions[i].q)}</strong><br>
+          ✖ Your answer: ${escapeHtml(userChoice)}<br>
+          ✔ Correct: ${escapeHtml(correctOptionText)}
+        </div>
+      `;
+    }
+  }
+  if (missedCount === 0) {
+    resultHtml += `<p style="color:#15803d;">✨ Perfect! No missed questions. You have thorough knowledge.</p>`;
+  } else {
+    resultHtml += `<p><strong>📌 Missed ${missedCount} question(s). Review above for improvement.</strong></p>`;
+  }
+  resultHtml += `</div></details><br>
+    <p style="margin-top:8px;">💡 <em>E-governance emphasizes transparency, efficiency, and citizen empowerment through ICT.</em></p>
+    </div>
+  `;
+  
+  const resultDiv = document.getElementById('result');
+  resultDiv.innerHTML = resultHtml;
+  resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function resetAllAnswers() {
+  const allRadios = document.querySelectorAll('#quiz input[type="radio"]');
+  allRadios.forEach(radio => {
+    radio.checked = false;
+  });
+  // reset result area to default message, preserving cleanliness
+  document.getElementById('result').innerHTML = `<p style="color:#2c5282; font-weight:500;">✨ All answers cleared. Take the quiz again!</p>`;
+}
+
+// attach dynamic event handlers after building DOM
+function init() {
+  buildQuiz();
+  const submitBtn = document.getElementById('submitBtn');
+  const resetBtn = document.getElementById('resetBtn');
+  if (submitBtn) submitBtn.addEventListener('click', evaluateQuiz);
+  if (resetBtn) resetBtn.addEventListener('click', resetAllAnswers);
+}
+
+// run initialization
+init();
+</script>
+</body>
+</html>
